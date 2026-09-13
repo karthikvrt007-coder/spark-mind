@@ -1,0 +1,40 @@
+:root {
+  --bg: #120a12;
+  --card: #1e121c;
+  --ink: #f6e8ef;
+  --muted: #c9a3b4;
+  --accent: #ff5d8f;
+  --accent-2: #ffb347;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: Georgia, 'Times New Roman', serif; }
+body { max-width: 720px; margin: 0 auto; padding: 1.25rem; }
+header { display: flex; justify-content: space-between; gap: 1rem; align-items: flex-end; }
+h1 { margin: 0; font-size: 1.8rem; letter-spacing: 0.04em; }
+.tag { margin: 0.2rem 0 0; color: var(--muted); font-size: 0.95rem; }
+.stats { text-align: right; font-variant-numeric: tabular-nums; }
+.stats span { color: var(--accent); font-size: 1.3rem; }
+nav { display: flex; gap: 0.5rem; margin: 1.25rem 0; }
+nav button, .game-card, #arena button, .buy {
+  background: var(--card); color: var(--ink); border: 1px solid #3a2434;
+  border-radius: 12px; padding: 0.7rem 1rem; cursor: pointer; font: inherit;
+}
+nav button.active, .buy { border-color: var(--accent); color: var(--accent); }
+.games { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.game-card { text-align: left; min-height: 5.2rem; }
+.game-card small { color: var(--muted); }
+.hint { color: var(--muted); line-height: 1.45; }
+#arena { margin-top: 1rem; }
+#arena-board { margin: 1rem 0; min-height: 3rem; font-size: 1.4rem; letter-spacing: 0.12em; }
+.grid { display: grid; gap: 6px; }
+.cell { aspect-ratio: 1; border-radius: 8px; background: #2a1a26; border: 0; cursor: pointer; }
+.cell.on { background: var(--accent); }
+.cell.mark { outline: 2px solid var(--accent-2); }
+.stroop { font-size: 2rem; font-weight: 700; letter-spacing: 0.08em; }
+.shop-item, .vault-item {
+  background: var(--card); border-radius: 14px; padding: 1rem 1.1rem; margin-bottom: 0.8rem;
+  border: 1px solid #3a2434;
+}
+.shop-item h3, .vault-item h3 { margin: 0 0 0.35rem; font-size: 1.05rem; }
+.cost { color: var(--accent-2); font-size: 0.9rem; }
+.reward-body { white-space: pre-wrap; line-height: 1.5; }
