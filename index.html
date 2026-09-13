@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spark Mind</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Spark Mind</h1>
+      <p class="tag">Train the brain. Unlock the heat.</p>
+    </div>
+    <div class="stats">
+      <div><span id="points">0</span> pts</div>
+      <div><span id="streak">0</span> day streak</div>
+    </div>
+  </header>
+
+  <nav>
+    <button data-view="play" class="active">Play</button>
+    <button data-view="shop">Rewards</button>
+    <button data-view="vault">Vault</button>
+  </nav>
+
+  <main id="view-play">
+    <p class="hint">Pick a drill. Harder as you get better. Same-day extra plays still give points, but the first play of the day lights the streak.</p>
+    <div class="games">
+      <button class="game-card" data-game="digits">Digit span<br><small>working memory</small></button>
+      <button class="game-card" data-game="math">Quick math<br><small>speed</small></button>
+      <button class="game-card" data-game="grid">Pattern grid<br><small>visual memory</small></button>
+      <button class="game-card" data-game="stroop">Color word<br><small>focus</small></button>
+    </div>
+    <section id="arena" hidden>
+      <h2 id="arena-title"></h2>
+      <p id="arena-prompt"></p>
+      <div id="arena-board"></div>
+      <div id="arena-actions"></div>
+      <p id="arena-status"></p>
+      <button id="back-play" type="button">Back to games</button>
+    </section>
+  </main>
+
+  <main id="view-shop" hidden>
+    <p class="hint">Spend points. Each unlock is saved in your vault and written to pull you back tomorrow.</p>
+    <div id="shop-list"></div>
+  </main>
+
+  <main id="view-vault" hidden>
+    <p class="hint">Everything you have unlocked. Read them whenever you want a reminder why you showed up.</p>
+    <div id="vault-list"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
